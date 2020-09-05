@@ -22,6 +22,7 @@
       </header>
       <ul>
         <!-- User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section. -->
+        <!-- User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world"). -->
         <li><a class="nav-link" href="#main1">What is HTML?</a></li>
         <li><a class="nav-link" href="#main2">HTML Elements</a></li>
         <li><a class="nav-link" href="#main3">HTML Editors</a></li>
@@ -35,6 +36,7 @@
         <li><a class="nav-link" href="#main11">HTML Tables</a></li>
         <li><a class="nav-link" href="#main12">HTML Classes</a></li>
         <li><a class="nav-link" href="#main13">HTML Id</a></li>
+        <!-- User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header.) -->
         <li><a class="nav-link" href="#main14">HTML Responsive</a></li>
         <li><a class="nav-link" href="#main15">HTML Entities</a></li>
         <li><a class="nav-link" href="#main16">HTML Symbols</a></li>
@@ -46,7 +48,8 @@
   <!-- User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation). -->
   <main id="main-doc">
     <!-- User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5. -->
-    <section id="main1" class="main-section">
+    <section id="main1" id="what_is_html" class="main-section">
+      <!-- User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section. -->
       <header>
         <h2>What is HTML?</h2>
       </header>
@@ -67,10 +70,12 @@
         commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
         debitis natus illum modi delectus maxime.</p>
     </section>
-    <section id="main2" class="main-section">
+    <!-- User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java"). -->
+    <section id="main2" id="html_elements" class="main-section">
       <header>
         <h2>HTML Elements</h2>
       </header>
+      <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
         modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
         voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
@@ -83,7 +88,7 @@
         commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
         debitis natus illum modi delectus maxime.</p>
     </section>
-    <section id="main3" class="main-section">
+    <section id="main3" id="html_editors" class="main-section">
       <header>
         <h2>HTML Editors</h2>
       </header>
@@ -91,15 +96,18 @@
         modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
         voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
+      <code>function greetMe(yourName) { alert("Hello " + yourName); }
+        greetMe("World");
+        </code>
+      <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
         minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
         voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+        quos, tempora explicabo. Sequi.</p>
     </section>
-    <section id="main4" class="main-section">
+    <section id="main4" id="html_lists" class="main-section">
       <header>
         <h2>HTML Lists</h2>
       </header>
@@ -107,15 +115,18 @@
         modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
         voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
+      <code>function greetMe(yourName) { alert("Hello " + yourName); }
+        greetMe("World");
+        </code>
+      <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
         minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
         voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+        quos, tempora explicabo. Sequi.</p>
     </section>
-    <section id="main5" class="main-section">
+    <section id="main5" id="html_attributes" class="main-section">
       <header>
         <h2>HTML Attributes</h2>
       </header>
@@ -123,15 +134,19 @@
         modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
         voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
-        repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <!-- User Story #7: The .main-section elements should contain at least 5 li items total (not each). -->
+      <ul>
+        <li>Laborum vitae praesentium assumenda laudantium
+          repellendus facere dolor.</li>
+        <li>
+          Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
+          minima dolorem facere, est placeat.
+        </li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      </ul>
     </section>
-    <section id="main6" class="main-section">
+    <section id="main6" id="html_headings" class="main-section">
       <header>
         <h2>HTML Headings</h2>
       </header>
@@ -139,15 +154,18 @@
         modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
         voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
+      <code>function greetMe(yourName) { alert("Hello " + yourName); }
+        greetMe("World");
+        </code>
+      <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
         minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
         voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+        quos, tempora explicabo. Sequi.</p>
     </section>
-    <section id="main7" class="main-section">
+    <section id="main7" id="html_paragraphs" class="main-section">
       <header>
         <h2>HTML Paragraphs</h2>
       </header>
@@ -155,15 +173,18 @@
         modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
         voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
+      <code>function greetMe(yourName) { alert("Hello " + yourName); }
+        greetMe("World");
+        </code>
+      <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
         minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
         voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+        quos, tempora explicabo. Sequi.</p>
     </section>
-    <section id="main8" class="main-section">
+    <section id="main8" id="html_styles" class="main-section">
       <header>
         <h2>HTML Styles</h2>
       </header>
@@ -171,15 +192,19 @@
         modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
         voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
-        repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <!-- User Story #7: The .main-section elements should contain at least 5 li items total (not each). -->
+      <ul>
+        <li>Laborum vitae praesentium assumenda laudantium
+          repellendus facere dolor.</li>
+        <li>
+          Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
+          minima dolorem facere, est placeat.
+        </li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      </ul>
     </section>
-    <section id="main9" class="main-section">
+    <section id="main9" id="html_colors" class="main-section">
       <header>
         <h2>HTML Colors</h2>
       </header>
@@ -195,7 +220,7 @@
         commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
         debitis natus illum modi delectus maxime.</p>
     </section>
-    <section id="main10" class="main-section">
+    <section id="main10" id="html_images" class="main-section">
       <header>
         <h2>HTML Images</h2>
       </header>
@@ -203,15 +228,18 @@
         modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
         voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
+      <code>function greetMe(yourName) { alert("Hello " + yourName); }
+        greetMe("World");
+        </code>
+      <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
         minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
         voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+        quos, tempora explicabo. Sequi.</p>
     </section>
-    <section id="main11" class="main-section">
+    <section id="main11" id="html_tables" class="main-section">
       <header>
         <h2>HTML Tables</h2>
       </header>
@@ -219,15 +247,19 @@
         modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
         voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
-        repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <!-- User Story #7: The .main-section elements should contain at least 5 li items total (not each). -->
+      <ul>
+        <li>Laborum vitae praesentium assumenda laudantium
+          repellendus facere dolor.</li>
+        <li>
+          Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
+          minima dolorem facere, est placeat.
+        </li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      </ul>
     </section>
-    <section id="main12" class="main-section">
+    <section id="main12" id="html_classes" class="main-section">
       <header>
         <h2>HTML Classes</h2>
       </header>
@@ -235,15 +267,18 @@
         modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
         voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
+      <code>function greetMe(yourName) { alert("Hello " + yourName); }
+        greetMe("World");
+        </code>
+      <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
         minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
         voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+        quos, tempora explicabo. Sequi.</p>
     </section>
-    <section id="main13" class="main-section">
+    <section id="main13" id="html_id" class="main-section">
       <header>
         <h2>HTML Id</h2>
       </header>
@@ -259,7 +294,7 @@
         commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
         debitis natus illum modi delectus maxime.</p>
     </section>
-    <section id="main14" class="main-section">
+    <section id="main14" id="html_responsive" class="main-section">
       <header>
         <h2>HTML Responsive</h2>
       </header>
@@ -275,7 +310,7 @@
         commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
         debitis natus illum modi delectus maxime.</p>
     </section>
-    <section id="main15" class="main-section">
+    <section id="main15" id="html_entities" class="main-section">
       <header>
         <h2>HTML Entities</h2>
       </header>
@@ -291,7 +326,7 @@
         commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
         debitis natus illum modi delectus maxime.</p>
     </section>
-    <section id="main16" class="main-section">
+    <section id="main16" id="html_symbols" class="main-section">
       <header>
         <h2>HTML Symbols</h2>
       </header>
@@ -299,15 +334,18 @@
         modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
         voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
+      <code>function greetMe(yourName) { alert("Hello " + yourName); }
+        greetMe("World");
+        </code>
+      <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
         minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
         voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+        quos, tempora explicabo. Sequi.</p>
     </section>
-    <section id="main17" class="main-section">
+    <section id="main17" id="html_emojis" class="main-section">
       <header>
         <h2>HTML Emojis</h2>
       </header>
@@ -315,48 +353,42 @@
         modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
         voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
+      <code>function greetMe(yourName) { alert("Hello " + yourName); }
+        greetMe("World");
+        </code>
+      <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
         minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
         voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+        quos, tempora explicabo. Sequi.</p>
     </section>
-    <section id="main18" class="main-section">
+    <section id="main18" id="html_style_guide" class="main-section">
       <header>
-        <h2>HTML HTML Style Guide</h2>
+        <h2>HTML Style Guide</h2>
       </header>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
         modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
         voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
-        repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <!-- User Story #7: The .main-section elements should contain at least 5 li items total (not each). -->
+      <ul>
+        <li>Laborum vitae praesentium assumenda laudantium
+          repellendus facere dolor.</li>
+        <li>
+          Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
+          minima dolorem facere, est placeat.
+        </li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      </ul>
     </section>
   </main>
 </body>
 
-
-
 </html>
 
-
-<!-- 
-
-User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section.
-
-User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java").
-
-User Story #5: The .main-section elements should contain at least 10 p elements total (not each).
-
-User Story #6: The .main-section elements should contain at least 5 code elements total (not each).
-
-User Story #7: The .main-section elements should contain at least 5 li items total (not each).
+<!-- User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
 
 User Story #15: My Technical Documentation page should use at least one media query. -->
