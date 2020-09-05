@@ -5,7 +5,8 @@ General Styling
 body {
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
+  max-width: 1400px;
 }
 
 img {
@@ -61,6 +62,15 @@ Nav Bar
 Main
 =========================================================== */
 
+#main-doc {
+  margin: 0 17rem;
+  text-align: left;
+}
+
+#main-doc header {
+  padding-top: 1rem;
+}
+
 /* ===========================================================
 Footer
 =========================================================== */
@@ -68,3 +78,8 @@ Footer
 /* ===========================================================
 Media Query
 =========================================================== */
+@media (max-width: 768px) {
+  h2 {
+    color: #000000;
+  }
+}
