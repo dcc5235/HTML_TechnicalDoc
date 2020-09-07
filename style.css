@@ -191,6 +191,46 @@ Media Query
 =========================================================== */
 @media (min-width: 768px) {
   .topnav {
+    position: fixed;
+    margin: 1rem 0;
+    text-align: left;
+    width: 15rem;
+    height: 100%;
+    border-right: solid;
+    border-color: rgba(105, 92, 92, 0.3);
+    background: #fffdfd;
+  }
+
+  .topnav ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .topnav ul a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 2rem;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-top: 0.0625rem solid rgb(255, 255, 255, 0.1);
+    border-bottom: 0.0625rem solid #000000;
+  }
+
+  .topnav ul a,
+  .topnav h2 {
+    padding-left: 1rem;
+    color: #685b5c;
+  }
+
+  .topnav ul li:hover a {
+    padding-left: 3.125rem;
+  }
+
+  .topnav ul a {
+    margin-right: 1rem;
+  }
+  .topnav {
     height: 100%;
     width: 200px;
     position: fixed;
