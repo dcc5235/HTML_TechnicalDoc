@@ -18,19 +18,185 @@ Nav Bar
 =========================================================== */
 
 .navbar {
-  position: fixed;
-  margin: 1rem 0;
-  text-align: left;
-  width: 15rem;
-  height: 100%;
-  border-right: solid;
-  border-color: rgba(105, 92, 92, 0.3);
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   background: #fffdfd;
+  width: 100%;
+  border-radius: 0 0 0.3125rem 0.3125rem;
+}
+
+.navbar:target {
+  display: block;
+}
+
+.header .menu-icon .nav-icon:before {
+  background: #000;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 5px;
+  transition: background 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:after {
+  background: #000;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -5px;
+  transition: background 0.2s ease-out;
+}
+
+/* ===========================================================
+Main
+=========================================================== */
+
+#main {
+  position: relative;
+  background: #fff;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 0 0 0.3125rem 0.3125rem;
+}
+
+#t01 tr:nth-child(odd) {
+  background-color: #f1f1f1;
+  border: 0.1rem solid #f1f1f1;
+}
+
+.main-section {
+  padding-bottom: 1rem;
+}
+
+.main-section h2 {
+  background: #4f4f91;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 -2rem;
+  padding: 0.7rem 0;
+}
+
+.main-section p,
+.main-section h4,
+.main-section ul {
+  text-align: left;
+}
+
+.main-section p,
+.main-section ul {
+  font-size: 0.8rem;
+}
+
+.main-section ul {
+  padding-left: 2rem;
+}
+
+.codespan {
+  color: #7979af;
+  background-color: #f1f1f1;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+}
+
+.codeblock {
+  padding: 1rem;
+}
+
+pre code {
+  background: #f1f1f1;
+  border: 0.1rem solid #000;
+  display: block;
+  text-align: left;
+}
+
+table,
+th,
+td {
+  margin-top: 1rem;
+
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: left;
+  border-spacing: 5px;
+}
+
+.note {
+  background: #7979af;
+  margin: 0 -2rem 1rem -2rem;
+  padding: 1rem 2rem;
+  text-align: justify;
+  color: #fff;
+}
+
+/* ===========================================================
+Footer
+=========================================================== */
+
+/* ===========================================================
+Media Query
+=========================================================== */
+@media (min-width: 768px) {
+  #main-doc {
+    margin: 0 17rem;
+    text-align: left;
+  }
+  #main-doc header {
+    padding-top: 1rem;
+  }
+  .burger {
+    display: none;
+  }
+  .navbar {
+    position: fixed;
+    margin: 0 0 1rem 0;
+    text-align: left;
+    width: 15rem;
+    height: 100%;
+    border-right: solid;
+    border-color: rgba(105, 92, 92, 0.3);
+    background: #fffdfd;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  .main-section p {
+    font-size: 1rem;
+  }
+
+  /* .nav-links {
+  position: absolute;
+  right: 0px;
+  height: 92vh;
+  top: 8vh;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  transform: translate(100%);
+  transition: transform(0.5s ease-in);
+} */
+
+  /* .nav-links li {
+  opacity: 0;
 }
 
 .navbar ul {
   padding: 0;
   list-style: none;
+}
+
+.navbar ul a,
+.navbar h2 {
+  padding-left: 1rem;
+  color: #685b5c;
 }
 
 .navbar ul a {
@@ -44,12 +210,6 @@ Nav Bar
   border-bottom: 0.0625rem solid #000000;
 }
 
-.navbar ul a,
-.navbar h2 {
-  padding-left: 1rem;
-  color: #685b5c;
-}
-
 .navbar ul li:hover a {
   padding-left: 3.125rem;
 }
@@ -58,28 +218,81 @@ Nav Bar
   margin-right: 1rem;
 }
 
-/* ===========================================================
-Main
-=========================================================== */
-
-#main-doc {
-  margin: 0 17rem;
-  text-align: left;
+.nav-active {
+  transform: translate(0);
 }
-
-#main-doc header {
-  padding-top: 1rem;
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background: #fffdfd;
 }
+body {
+  overflow-x: hidden;
+} */
 
-/* ===========================================================
-Footer
-=========================================================== */
-
-/* ===========================================================
-Media Query
-=========================================================== */
-@media (max-width: 768px) {
-  h2 {
+  .header {
+    background-color: #ffffff;
     color: #000000;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+
+  .header ul {
+    list-style: none;
+    overflow: hidden;
+    display: none;
+  }
+
+  .header ul a {
+    display: block;
+    padding: 0.2rem;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .header ul a:hover {
+    background-color: #f2f2f2;
+    color: #008080;
+  }
+
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    padding-left: 0;
+  }
+
+  .header .menu-icon {
+    padding: 3rem 2rem;
+    position: relative;
+    cursor: pointer;
+    float: right;
+  }
+
+  .header .menu-icon .nav-icon {
+    background: #000;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background 0.2s ease-out;
+  }
+
+  .header .menu-btn {
+    display: none;
+  }
+
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+
+  .menu-icon ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
   }
 }
