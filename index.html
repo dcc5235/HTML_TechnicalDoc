@@ -12,17 +12,12 @@
 </head>
 
 <body>
-  <header>
-    <!-- User Story #8: I can see a nav element with a corresponding id="navbar".-->
-    <nav id="navbar" class="navbar">
-      <!-- User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation.  -->
-      <!-- User Story #11: The header element in the navbar must come before any link (a) elements in the navbar. -->
-      <header>
-        <h2>HTML Documentation</h2>
-      </header>
-      <ul>
-        <!-- User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section. -->
-        <!-- User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world"). -->
+  <aside class="header">
+    <nav class="navbar">
+      <input class="menu-btn" type="checkbox" id="menu-btn">
+      <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+      <h2>HTML Documentation</h2>
+      <ul class="nav-links">
         <li><a class="nav-link" href="#main1">What is HTML?</a></li>
         <li><a class="nav-link" href="#main2">HTML Elements</a></li>
         <li><a class="nav-link" href="#main3">HTML Editors</a></li>
@@ -36,7 +31,6 @@
         <li><a class="nav-link" href="#main11">HTML Tables</a></li>
         <li><a class="nav-link" href="#main12">HTML Classes</a></li>
         <li><a class="nav-link" href="#main13">HTML Id</a></li>
-        <!-- User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header.) -->
         <li><a class="nav-link" href="#main14">HTML Responsive</a></li>
         <li><a class="nav-link" href="#main15">HTML Entities</a></li>
         <li><a class="nav-link" href="#main16">HTML Symbols</a></li>
@@ -44,57 +38,75 @@
         <li><a class="nav-link" href="#main18">HTML Style Guide</a></li>
       </ul>
     </nav>
-  </header>
-  <!-- User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation). -->
-  <main id="main-doc">
-    <!-- User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5. -->
-    <section id="main1" id="what_is_html" class="main-section">
-      <!-- User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section. -->
-      <header>
-        <h2>What is HTML?</h2>
-      </header>
-      <p>HTML stands for Hyper Text Markup Language. HTML is the standard markup language for creating Web pages. HTML
-        describes the structure of a Web page. HTML consists of a series of elements. HTML elements tell the browser how
-        to display the content. HTML elements label pieces of content such as "this is a heading", "this is a
-        paragraph", "this is a link", etc.
+  </aside>
+
+  <main id="main">
+    <section id="main1" class="main-section">
+      <h2>What is HTML?</h2>
+      <p>Hyper Text Markup Language (HTML) is the standard markup language for creating Web pages.</p>
+      <p>
+      <ul>
+        <li>HTML describes the structure of a Web page</li>
+        <li>HTML consists of a series of elements</li>
+        <li>HTML elements tell the browser how to display the content</li>
+        <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link",
+          etc.</li>
+      </ul>
       </p>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
-        laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
-        repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+      <hr>
+      <h4>Example of a Simple HTML Document</h4>
+      <div class="code-sheet">
+        <pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;head&gt;
+  &lt;body&gt;
+          
+  &lt;h1&gt;My First Heading&lt;/h1&gt;
+  &lt;p&gt;My first paragraph.&lt;/p&gt;
+          
+  &lt;body&gt;
+  &lt;html&gt;
+          </code></pre>
+        <hr>
+        <h4>Example Explained</h4>
+        <ul>
+          <li>The <code class="codespan">&lt;!DOCTYPE html&gt;</code> declaration defines that this document is an HTML5
+            document
+          </li>
+          <li>The <code class="codespan">&lt;html&gt;</code> element is the root element of an HTML page</li>
+          <li>The <code class="codespan">&lt;head&gt;</code> element contains meta information about the HTML page</li>
+          <li>The <code class="codespan">&lt;title&gt;</code> element specifies a title for the HTML page (which is
+            shown in the browser's title bar
+            or in the page's tab)</li>
+          <li>The <code class="codespan">&lt;body&gt;</code> element defines the document's body, and is a container for
+            all the visible contents,
+            such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</li>
+          <li>The <code class="codespan">&lt;h1&gt;</code> element defines a large heading</li>
+          <li>The <code class="codespan">&lt;p&gt;</code> element defines a paragraph</li>
+        </ul>
+      </div>
     </section>
-    <!-- User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java"). -->
-    <section id="main2" id="html_elements" class="main-section">
-      <header>
-        <h2>HTML Elements</h2>
-      </header>
-      <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
-        laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
-        repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
-        quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
-        commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
-        debitis natus illum modi delectus maxime.</p>
+    <section id="main2" class="main-section">
+      <h2>HTML Elements</h2>
+      <p>An HTML element is defined by a start tag, some content, and an end tag:</p>
+      <code>&lt;tagname&gt;Content goes here...&lt;/tagname&gt;</code>
+      <p>The HTML element is everything from the start tag to the end tag:</p>
+      <h1>My First Heading</h1>
+      <p>My first paragraph.</p>
     </section>
     <section id="main3" id="html_editors" class="main-section">
       <header>
         <h2>HTML Editors</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
         facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
@@ -103,17 +115,22 @@
         </code>
       <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
+        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        hic
+        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid
+        iste
         quos, tempora explicabo. Sequi.</p>
     </section>
     <section id="main4" id="html_lists" class="main-section">
       <header>
         <h2>HTML Lists</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
         facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
@@ -122,17 +139,22 @@
         </code>
       <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
+        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        hic
+        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid
+        iste
         quos, tempora explicabo. Sequi.</p>
     </section>
     <section id="main5" id="html_attributes" class="main-section">
       <header>
         <h2>HTML Attributes</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
         facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.
         <!-- User Story #7: The .main-section elements should contain at least 5 li items total (not each). -->
@@ -150,9 +172,12 @@
       <header>
         <h2>HTML Headings</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
         facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
@@ -161,17 +186,22 @@
         </code>
       <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
+        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        hic
+        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid
+        iste
         quos, tempora explicabo. Sequi.</p>
     </section>
     <section id="main7" id="html_paragraphs" class="main-section">
       <header>
         <h2>HTML Paragraphs</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
         facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
@@ -180,17 +210,22 @@
         </code>
       <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
+        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        hic
+        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid
+        iste
         quos, tempora explicabo. Sequi.</p>
     </section>
     <section id="main8" id="html_styles" class="main-section">
       <header>
         <h2>HTML Styles</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
         facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.
         <!-- User Story #7: The .main-section elements should contain at least 5 li items total (not each). -->
@@ -208,14 +243,20 @@
       <header>
         <h2>HTML Colors</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda
+        laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
+        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        hic
+        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid
+        iste
         quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
         commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
         debitis natus illum modi delectus maxime.</p>
@@ -224,9 +265,12 @@
       <header>
         <h2>HTML Images</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
         facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
@@ -235,17 +279,22 @@
         </code>
       <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
+        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        hic
+        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid
+        iste
         quos, tempora explicabo. Sequi.</p>
     </section>
     <section id="main11" id="html_tables" class="main-section">
       <header>
         <h2>HTML Tables</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
         facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.
         <!-- User Story #7: The .main-section elements should contain at least 5 li items total (not each). -->
@@ -263,9 +312,12 @@
       <header>
         <h2>HTML Classes</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
         facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
@@ -274,22 +326,30 @@
         </code>
       <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
+        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        hic
+        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid
+        iste
         quos, tempora explicabo. Sequi.</p>
     </section>
     <section id="main13" id="html_id" class="main-section">
       <header>
         <h2>HTML Id</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda
+        laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
+        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        hic
+        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid
+        iste
         quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
         commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
         debitis natus illum modi delectus maxime.</p>
@@ -298,14 +358,20 @@
       <header>
         <h2>HTML Responsive</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda
+        laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
+        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        hic
+        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid
+        iste
         quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
         commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
         debitis natus illum modi delectus maxime.</p>
@@ -314,14 +380,20 @@
       <header>
         <h2>HTML Entities</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda laudantium
+        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae praesentium assumenda
+        laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
+        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        hic
+        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid
+        iste
         quos, tempora explicabo. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente delectus
         commodi quos ex culpa, placeat cumque consequatur! Quae, quisquam quaerat molestias eveniet minus dolorum
         debitis natus illum modi delectus maxime.</p>
@@ -330,9 +402,12 @@
       <header>
         <h2>HTML Symbols</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
         facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
@@ -341,17 +416,22 @@
         </code>
       <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
+        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        hic
+        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid
+        iste
         quos, tempora explicabo. Sequi.</p>
     </section>
     <section id="main17" id="html_emojis" class="main-section">
       <header>
         <h2>HTML Emojis</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
         facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
@@ -360,17 +440,22 @@
         </code>
       <p>Laborum vitae praesentium assumenda laudantium
         repellendus facere dolor. Molestias tenetur unde, necessitatibus fugiat deleniti ea dignissimos consectetur,
-        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic
-        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid iste
+        minima dolorem facere, est placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        hic
+        voluptates omnis assumenda veniam debitis autem dolores tenetur in consequatur beatae eaque et eius aliquid
+        iste
         quos, tempora explicabo. Sequi.</p>
     </section>
     <section id="main18" id="html_style_guide" class="main-section">
       <header>
         <h2>HTML Style Guide</h2>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi alias
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
+        tenetur
+        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
+        voluptas
+        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
+        alias
         laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
         facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.
         <!-- User Story #7: The .main-section elements should contain at least 5 li items total (not each). -->
