@@ -6,39 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>HTML5 for Beginners</title>
 
 
 </head>
 
 <body>
-  <aside class="header">
-    <nav class="navbar">
-      <input class="menu-btn" type="checkbox" id="menu-btn">
-      <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+
+  <nav class="topnav">
+    <div class="active">
       <h2>HTML Documentation</h2>
-      <ul class="nav-links">
-        <li><a class="nav-link" href="#main1">What is HTML?</a></li>
-        <li><a class="nav-link" href="#main2">HTML Elements</a></li>
-        <li><a class="nav-link" href="#main3">HTML Editors</a></li>
-        <li><a class="nav-link" href="#main4">HTML Lists</a></li>
-        <li><a class="nav-link" href="#main5">HTML Attributes</a></li>
-        <li><a class="nav-link" href="#main6">HTML Headings</a></li>
-        <li><a class="nav-link" href="#main7">HTML Paragraphs</a></li>
-        <li><a class="nav-link" href="#main8">HTML Styles</a></li>
-        <li><a class="nav-link" href="#main9">HTML Colors</a></li>
-        <li><a class="nav-link" href="#main10">HTML Images</a></li>
-        <li><a class="nav-link" href="#main11">HTML Tables</a></li>
-        <li><a class="nav-link" href="#main12">HTML Classes</a></li>
-        <li><a class="nav-link" href="#main13">HTML Id</a></li>
-        <li><a class="nav-link" href="#main14">HTML Responsive</a></li>
-        <li><a class="nav-link" href="#main15">HTML Entities</a></li>
-        <li><a class="nav-link" href="#main16">HTML Symbols</a></li>
-        <li><a class="nav-link" href="#main17">HTML Emojis</a></li>
-        <li><a class="nav-link" href="#main18">HTML Style Guide</a></li>
-      </ul>
-    </nav>
-  </aside>
+    </div>
+    <ul id="myLinks">
+      <li><a class="nav-link" href="#main1">What is HTML?</a></li>
+      <li><a class="nav-link" href="#main2">HTML Elements</a></li>
+      <li><a class="nav-link" href="#main3">HTML Editors</a></li>
+      <li><a class="nav-link" href="#main4">HTML Lists</a></li>
+      <li><a class="nav-link" href="#main5">HTML Attributes</a></li>
+      <li><a class="nav-link" href="#main6">HTML Headings</a></li>
+      <li><a class="nav-link" href="#main7">HTML Paragraphs</a></li>
+      <li><a class="nav-link" href="#main8">HTML Styles</a></li>
+      <li><a class="nav-link" href="#main9">HTML Colors</a></li>
+      <li><a class="nav-link" href="#main10">HTML Images</a></li>
+      <li><a class="nav-link" href="#main11">HTML Tables</a></li>
+      <li><a class="nav-link" href="#main12">HTML Classes</a></li>
+      <li><a class="nav-link" href="#main13">HTML Id</a></li>
+      <li><a class="nav-link" href="#main14">HTML Responsive</a></li>
+      <li><a class="nav-link" href="#main15">HTML Entities</a></li>
+      <li><a class="nav-link" href="#main16">HTML Symbols</a></li>
+      <li><a class="nav-link" href="#main17">HTML Emojis</a></li>
+      <li><a class="nav-link" href="#main18">HTML Style Guide</a></li>
+    </ul>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
 
   <main id="main">
     <section id="main1" class="main-section">
@@ -92,8 +95,8 @@
       <p>An HTML element is defined by a start tag, some content, and an end tag:</p>
       <code class="codeblock">&lt;tagname&gt;Content goes here...&lt;/tagname&gt;</code>
       <p>The HTML element is everything from the start tag to the end tag:</p>
-      <code class="codeblock">&lt;h1&gt;My First Heading&lt;/h1&gt;</code>
-      <code class="codeblock">&lt;p&gt;My first paragraph.&lt;/p&gt;</code>
+      <div><code class="codeblock">&lt;h1&gt;My First Heading&lt;/h1&gt;</code></div>
+      <div><code class="codeblock">&lt;p&gt;My first paragraph.&lt;/p&gt;</code></div>
       <table id="t01" style="width:100%">
         <tr>
           <th>Start Tag</th>
@@ -576,6 +579,21 @@
       </ul>
     </section>
   </main>
+
+  <footer>
+    <p>All documentation in this page is taken from the <a
+        href="https://www.w3schools.com/html/default.asp">w3schools.com</a></p>
+  </footer>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
 </body>
 
 </html>
