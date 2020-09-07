@@ -123,7 +123,6 @@ table,
 th,
 td {
   margin-top: 1rem;
-
   border-collapse: collapse;
   padding: 1rem;
   text-align: left;
@@ -141,6 +140,37 @@ td {
 .note h5 {
   padding-bottom: 0;
 }
+
+.red,
+.blue,
+.orange,
+.green {
+  padding: 2rem;
+  border: 0.1rem solid;
+  margin: 0.5rem;
+  color: #fff;
+}
+
+.red {
+  border: #ff0000;
+  background: #ff0000;
+}
+
+.blue {
+  border: #0000ff;
+  background: #0000ff;
+}
+
+.orange {
+  border: #ffa500;
+  background: #ffa500;
+}
+
+.green {
+  border: #008000;
+  background: #008000;
+}
+
 /* ===========================================================
 Footer
 =========================================================== */
@@ -171,6 +201,8 @@ Media Query
   }
   body {
     overflow-x: hidden;
+    max-width: 968px;
+    margin: 0 auto;
   }
 
   .main-section p {
