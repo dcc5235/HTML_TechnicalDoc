@@ -85,16 +85,19 @@ Main
 
 .main-section p,
 .main-section h4,
-.main-section ul {
+.main-section ul,
+.main-section ol {
   text-align: left;
 }
 
 .main-section p,
-.main-section ul {
+.main-section ul,
+.main-section ol {
   font-size: 0.8rem;
 }
 
-.main-section ul {
+.main-section ul,
+.main-section ol {
   padding-left: 2rem;
 }
 
