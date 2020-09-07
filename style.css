@@ -92,7 +92,8 @@ Main
 
 .main-section p,
 .main-section ul,
-.main-section ol {
+.main-section ol,
+table {
   font-size: 0.8rem;
 }
 
