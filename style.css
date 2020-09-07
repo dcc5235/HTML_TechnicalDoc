@@ -11,6 +11,7 @@ body {
 
 img {
   width: 100%;
+  padding: 0.5rem 0;
 }
 
 /* ===========================================================
@@ -84,16 +85,19 @@ Main
 
 .main-section p,
 .main-section h4,
-.main-section ul {
+.main-section ul,
+.main-section ol {
   text-align: left;
 }
 
 .main-section p,
-.main-section ul {
+.main-section ul,
+.main-section ol {
   font-size: 0.8rem;
 }
 
-.main-section ul {
+.main-section ul,
+.main-section ol {
   padding-left: 2rem;
 }
 
@@ -134,6 +138,9 @@ td {
   color: #fff;
 }
 
+.note h5 {
+  padding-bottom: 0;
+}
 /* ===========================================================
 Footer
 =========================================================== */
