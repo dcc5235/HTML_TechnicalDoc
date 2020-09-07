@@ -302,7 +302,8 @@
       <h1 style="background-color:rgb(255, 99, 71);">rgb(255, 99, 71)</h1>
       <h1 style="background-color:#ff6347;">#ff6347</h1>
       <h1 style="background-color:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</h1>
-      <p>The following two &lt;div&gt; elements have their background color set with RGBA and HSLA values, which
+      <p>The following two <code class="codespan">&lt;div&gt;</code> elements have their background color set with RGBA
+        and HSLA values, which
         adds an Alpha channel to the color
         (here we have 50% transparency):</p>
       <h1 style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</h1>
@@ -324,14 +325,40 @@
     </section>
     <section id="main10" class="main-section">
       <h2>HTML Images</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis praesentium odit est inventore
-        tenetur
-        modi itaque impedit neque tempora mollitia consequuntur minima laboriosam, expedita laborum corrupti
-        voluptas
-        voluptatum et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae consequuntur commodi
-        alias
-        laborum inventore qui dicta autem ut error id, sit dolorem vel quibusdam corporis libero aliquid praesentium
-        facere? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p>Images can improve the design and the appearance of a web page.</p>
+      <hr>
+      <p>The HTML <code class="codespan">&lt;img&gt;</code> tag is used to embed an image in a web page.</p>
+      <p>Images are not technically inserted into a web page; images are linked to web pages. The <code
+          class="codespan">&lt;img&gt;</code> tag
+        creates a holding space for the referenced image.</p>
+      <p>The <code class="codespan">&lt;img&gt;</code> tag is empty, it contains attributes only, and does not have a
+        closing tag.</p>
+      <p>The <code class="codespan">&lt;img&gt;</code> tag has two required attributes:</p>
+      <ul>
+        <li>src - Specifies the path to the image</li>
+        <li>alt - Specifies an alternate text for the image</li>
+      </ul>
+      <h4>Syntax</h4>
+      <pre><code>
+  &lt;img src=&quot;img_girl.jpg&quot; 
+  alt=&quot;alternatetext&quot;&gt;
+                </code></pre>
+      <hr>
+      <h4>The src Attribute</h4>
+      <p>The required <code class="codespan">&lt;src&gt;</code> attribute specifies the path (URL) to the image.</p>
+      <div class="note">
+        <p>
+          Note: When a web page loads; it is the browser, at that moment, that gets the image from a web server and
+          inserts
+          it into the page. Therefore, make sure that the image actually stay in the same spot in relation to the web
+          page,
+          otherwise your visitors will get a broken link icon. The broken link icon and the alt text are shown if the
+          browser cannot find the image.</p>
+      </div>
+      <pre><code>
+  &lt;img src=&quot;img_chania.jpg&quot; 
+  alt=&quot;Flowers in Chania&quot;&gt;
+      </code></pre>
     </section>
     <section id="main11" class="main-section">
       <h2>HTML Tables</h2>
