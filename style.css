@@ -6,7 +6,6 @@ body {
   font-family: "Open Sans", sans-serif;
   text-align: center;
   margin: 0;
-  max-width: 1400px;
 }
 
 img {
@@ -37,19 +36,26 @@ Nav Bar
 .topnav #myLinks {
   display: none;
   list-style: none;
-  padding-left: 0;
+  padding: 1rem 0;
+  margin: 0;
 }
 
 .topnav a.icon {
   background: #fff;
   display: block;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 2rem;
+  top: 1.5rem;
 }
 
-.topnav li a:hover {
+.topnav li:hover {
   background-color: #ddd;
+  color: #4f4f91;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.topnav li a:visited {
   color: #4f4f91;
 }
 
@@ -192,13 +198,16 @@ Media Query
 @media (min-width: 768px) {
   .topnav {
     position: fixed;
-    margin: 1rem 0;
     text-align: left;
     width: 15rem;
     height: 100%;
     border-right: solid;
     border-color: rgba(105, 92, 92, 0.3);
     background: #fffdfd;
+  }
+
+  .topnav a.icon {
+    display: none;
   }
 
   .topnav ul {
@@ -257,11 +266,6 @@ Media Query
     font-size: 1.3rem;
   }
 
-  body {
-    max-width: 968px;
-    margin: 0 auto;
-  }
-
   .red,
   .blue,
   .orange,
@@ -279,6 +283,15 @@ Media Query
   .orange,
   .green {
     margin-top: 1rem;
+  }
+
+  .active {
+    padding-left: 0;
+  }
+
+  body {
+    max-width: 800px;
+    margin: 0 13.2rem;
   }
 
   table {
