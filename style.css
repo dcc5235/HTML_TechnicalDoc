@@ -51,7 +51,6 @@ Nav Bar
   background-color: #ddd;
   color: #4f4f91;
   text-decoration: none;
-  padding: 1rem;
 }
 
 .topnav li a:visited {
@@ -188,10 +187,6 @@ td {
 }
 
 /* ===========================================================
-Footer
-=========================================================== */
-
-/* ===========================================================
 Media Query
 =========================================================== */
 @media (min-width: 768px) {
@@ -209,9 +204,9 @@ Media Query
     overflow-x: hidden;
   }
 
-  /* .topnav a.icon {
+  .topnav a.icon {
     display: none;
-  } */
+  }
 
   .topnav ul {
     padding: 0;
